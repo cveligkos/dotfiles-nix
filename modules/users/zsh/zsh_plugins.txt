@@ -1,0 +1,10 @@
+zsh-users/zsh-completions
+zsh-users/zsh-autosuggestions
+zdharma-continuum/fast-syntax-highlighting
+zsh-users/zsh-history-substring-search
+
+ohmyzsh/ohmyzsh path:plugins/colored-man-pages
+
+romkatv/powerlevel10k
+
+unixorn/fzf-zsh-plugin
