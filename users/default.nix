@@ -14,7 +14,6 @@
       userConfig = {
         git.enable = true;
         spotify.enable = true;
-        _1password.enable = true;
         firefox.enable = true;
         zsh.enable = true;
         zathura.enable = true;

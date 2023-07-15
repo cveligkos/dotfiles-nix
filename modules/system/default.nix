@@ -5,6 +5,7 @@
   ...
 }: {
   imports = [
+    ./_1password
     ./audio
     ./bluetooth
     ./podman

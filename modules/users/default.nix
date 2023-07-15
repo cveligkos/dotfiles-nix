@@ -6,7 +6,6 @@
   ...
 }: {
   imports = [
-    ./_1password
     ./firefox
     ./git
     ./spotify

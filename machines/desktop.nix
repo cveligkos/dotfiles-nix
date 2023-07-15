@@ -14,6 +14,7 @@
     bluetooth.enable = true;
     podman.enable = true;
     fonts.enable = true;
+    _1password.enable = true;
   };
 
   desktopPassthroughConfig = {
