@@ -69,6 +69,7 @@
 
       time
       killall
+      zoxide
 
       # eww-wayland
     ];
