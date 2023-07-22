@@ -15,6 +15,8 @@
         git.enable = true;
         spotify.enable = true;
         firefox.enable = true;
+        neovim.enable = true;
+        taskwarrior.enable = true;
         zsh.enable = true;
         zathura.enable = true;
         wezterm.enable = true;

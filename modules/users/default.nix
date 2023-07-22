@@ -10,6 +10,7 @@
     ./git
     ./spotify
     ./neovim
+    ./taskwarrior
     ./zsh
     ./zathura
     ./wezterm
