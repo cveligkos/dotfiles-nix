@@ -9,6 +9,7 @@
     ./firefox
     ./git
     ./spotify
+    ./neovim
     ./zsh
     ./zathura
     ./wezterm
@@ -35,6 +36,7 @@
       gparted
 
       ripgrep
+      fd
       jq
       yq-go
       exa
@@ -50,6 +52,9 @@
       nil
       rnix-lsp
       alejandra
+      lua-language-server
+      stylua
+      vscode-langservers-extracted
 
       btop
       lm_sensors
@@ -71,6 +76,9 @@
       killall
       zoxide
 
+      gcc
+      wget
+      gnumake
       # eww-wayland
     ];
   };
