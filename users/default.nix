@@ -12,8 +12,10 @@
     cveligkos = user.mkHomeManagerUser {
       username = "cveligkos";
       userConfig = {
+        config.hyprland.enable = true;
+        config.rofi.enable = true;
+        config.waybar.enable = true;
         git.enable = true;
-        hyprland-config.enable = true;
         spotify.enable = true;
         firefox.enable = true;
         neovim.enable = true;

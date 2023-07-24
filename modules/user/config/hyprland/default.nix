@@ -5,9 +5,9 @@
   ...
 }:
 with lib; let
-  cfg = config.cv.hyprland-config;
+  cfg = config.cv.config.hyprland;
 in {
-  options.cv.hyprland-config.enable = mkOption {
+  options.cv.config.hyprland.enable = mkOption {
     description = "Enable hyprland config";
     type = types.bool;
     default = false;

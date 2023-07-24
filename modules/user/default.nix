@@ -6,9 +6,11 @@
   ...
 }: {
   imports = [
+    ./config/hyprland
+    ./config/rofi
+    ./config/waybar
     ./firefox
     ./git
-    ./hyprland-config
     ./spotify
     ./neovim
     ./taskwarrior

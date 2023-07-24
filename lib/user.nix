@@ -13,7 +13,7 @@
     home-manager.lib.homeManagerConfiguration {
       inherit pkgs;
       modules = [
-        ../modules/users
+        ../modules/user
         {
           config = {
             cv = userConfig;
