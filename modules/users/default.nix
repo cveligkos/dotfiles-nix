@@ -20,9 +20,7 @@
   config = {
     xdg.enable = true;
 
-    programs.home-manager = {
-      enable = true;
-    };
+    programs.home-manager.enable = true;
 
     home.packages = with pkgs; [
       nnn
@@ -39,6 +37,7 @@
 
       ripgrep
       fd
+      tokei
       jq
       yq-go
       exa
@@ -57,12 +56,13 @@
       lua-language-server
       stylua
       vscode-langservers-extracted
+      shellcheck
+      nodePackages.bash-language-server
+      shfmt
 
       btop
       lm_sensors
 
-      _1password
-      _1password-gui
       kuro
       slack
       thunderbird
@@ -81,6 +81,11 @@
       gcc
       wget
       gnumake
+
+      htop
+      procs
+      inotify-tools
+
       # eww-wayland
     ];
   };
