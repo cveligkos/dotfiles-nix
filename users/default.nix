@@ -13,6 +13,7 @@
       username = "cveligkos";
       userConfig = {
         git.enable = true;
+        hyprland-config.enable = true;
         spotify.enable = true;
         firefox.enable = true;
         neovim.enable = true;
@@ -28,7 +29,7 @@
     cveligkos = user.mkSystemUser {
       name = "cveligkos";
       uid = 1000;
-      groups = ["wheel" "networkmanager" "docker"];
+      groups = ["wheel" "input" "networkmanager" "docker"];
       home = "/home/cveligkos";
       shell = pkgs.zsh;
       description = "Christos Veligkos";

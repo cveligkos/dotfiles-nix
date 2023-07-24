@@ -8,6 +8,7 @@
   imports = [
     ./firefox
     ./git
+    ./hyprland-config
     ./spotify
     ./neovim
     ./taskwarrior

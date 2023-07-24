@@ -8,6 +8,7 @@
     ./_1password
     ./audio
     ./bluetooth
+    ./hyprland
     ./podman
     ./fonts
     ./plasma

@@ -12,6 +12,7 @@
     xorg.enable = true;
     audio.enable = true;
     bluetooth.enable = true;
+    hyprland.enable = true;
     podman.enable = true;
     fonts.enable = true;
     _1password.enable = true;
