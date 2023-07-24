@@ -84,6 +84,7 @@
 
       htop
       procs
+      obs-studio
       inotify-tools
 
       # eww-wayland
