@@ -14,6 +14,11 @@ in {
   };
 
   config = mkIf (cfg.enable) {
+
+    home.packages = with pkgs; [
+      neovim
+    ];
+
     home.file = {
       nvim-config = {
         enable = true;

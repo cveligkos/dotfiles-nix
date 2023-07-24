@@ -34,7 +34,6 @@ end
 local files = {
 	"plugins.lualine",
 	"plugins.nvim-tree",
-	"plugins.telescope",
 	"plugins.flash",
 	"plugins.trouble",
 	"plugins.oil",
@@ -59,6 +58,8 @@ local files = {
 	"plugins.wilder",
 	"plugins.navigator",
 	"plugins.colorizer",
+	"plugins.rasi-vim",
+	"plugins.telescope",
 	"colorschemes.catppuccin",
 	"colorschemes.tokyonight",
 }

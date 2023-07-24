@@ -37,6 +37,7 @@ return {
 			cssls = {},
 			jsonls = {},
 			html = {},
+			bashls = {},
 		}
 
 		local common_config = {

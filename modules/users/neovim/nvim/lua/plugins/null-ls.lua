@@ -11,6 +11,7 @@ return {
 		local formatters = {
 			"stylua",
 			"alejandra",
+			"shfmt",
 		}
 
 		for _, f in ipairs(formatters) do
