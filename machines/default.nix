@@ -20,4 +20,16 @@
       overlays
       ;
   };
+
+  ideapad = import ./ideapad.nix {
+    inherit
+      pkgs
+      userRegistry
+      home-manager
+      host
+      lib
+      system
+      overlays
+      ;
+  };
 }

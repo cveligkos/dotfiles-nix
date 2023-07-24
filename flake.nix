@@ -51,8 +51,8 @@
       cveligkos = users.homeManagerUsers.cveligkos;
     };
 
-    nixosConfigurations = {
-      desktop = machines.desktop;
+    nixosConfigurations = with machines; {
+      inherit desktop ideapad;
     };
   };
 }
