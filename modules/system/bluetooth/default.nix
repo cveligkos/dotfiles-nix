@@ -1,8 +1,12 @@
-{ pkgs, config, lib, ... }:
+{
+  pkgs,
+  config,
+  lib,
+  ...
+}:
 with lib; let
   cfg = config.cv.bluetooth;
-in
-{
+in {
   options.cv.bluetooth.enable = mkOption {
     description = "Enable bluetooth";
     type = types.bool;
