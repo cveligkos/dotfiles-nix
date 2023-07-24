@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+name=$(hyprctl clients -j | jq --raw-output '.[].title | select(length > 0)' | rofi -dmenu)
+address=$(hyprctl clients -j | jq --raw-output ".[] | select(.title==\"$name\") | .address")
+
+if [[ -z $address ]]; then
+    exit 0
+fi
+
+hyprctl dispatch focuswindow "address:$address"

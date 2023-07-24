@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+nix_run() {
+	if [[ $# -eq 0 ]]; then
+		echo "Package name not given"
+		exit 1
+	elif [[ $# -gt 1 ]]; then
+		echo "More than one parameter given. Ignoring them except the first."
+	fi
+	nix run "nixpkgs#$1"
+}
+
+nix_run "$@"

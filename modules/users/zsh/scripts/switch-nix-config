@@ -1,0 +1,71 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+set -x
+
+join_by_string() {
+	local separator="$1"
+	shift
+	local first="$1"
+	shift
+	printf "%s" "$first" "${@/#/$separator}"
+}
+
+get_choice() {
+	local prompt=$1
+	local -n choices_array=$2
+	join_by_string $'\n' "${choices_array[@]}" | rofi -dmenu -p "$prompt"
+}
+
+handle_untracked_files() {
+	# Check for untracked files
+	untracked_files=$(cd "$DOTFILES" && git ls-files . --others --exclude-standard)
+	if [[ -n "$untracked_files" ]]; then
+		echo "Untracked files exist"
+	fi
+
+	local choices=("Yes" "No")
+	local choice
+	choice=$(get_choice "Add untracked files to dotfiles repo" choices)
+
+	if [[ "$choice" == "Yes" ]]; then
+		cd "$DOTFILES" && git add .
+	fi
+}
+
+run_in_terminal() {
+	local terminal="wezterm start"
+	local command="$* \
+		&& echo -e '\nSuccess. Press enter to exit.' \
+		|| echo -e '\nFailed. Press enter to exit.'; \
+		read"
+	$terminal zsh -c "$command"
+}
+
+declare_variables() {
+	DOTFILES="$HOME/.dotfiles"
+}
+
+main() {
+	declare_variables
+
+	choices=("Home manager" "System" "Both" "None")
+	local choice
+	choice=$(get_choice "Which configuration to switch?" choices)
+
+	declare -a commands
+
+	if [[ $choice == "Home manager" || $choice == "Both" ]]; then
+		commands+=("home-manager switch --flake $DOTFILES")
+	fi
+
+	if [[ $choice == "System" || $choice == "Both" ]]; then
+		commands+=("sudo nixos-rebuild switch")
+	fi
+
+	command_str=$(join_by_string ' \&\& ' "${commands[*]}")
+
+	run_in_terminal "$command_str"
+}
+
+main

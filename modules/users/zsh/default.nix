@@ -46,6 +46,13 @@ in {
         source = ./p10k.zsh;
         target = ".p10k.zsh";
       };
+
+      scripts = {
+        enable = true;
+        source = ./scripts;
+        target = ".scripts";
+        recursive = true;
+      };
     };
   };
 }

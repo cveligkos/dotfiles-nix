@@ -75,6 +75,9 @@ with builtins; {
                 neovim
                 helix
                 git
+
+                direnv
+                nix-direnv
               ];
             }
             // passthroughConfig;

@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+set -x
+
+nix_shell() {
+	if [[ $# -eq 0 ]]; then
+		echo "Package name not given"
+		exit 1
+	fi
+
+	local packages_str=" "
+	for pkg in "$@"; do
+		packages_str+="nixpkgs#$pkg "
+	done
+
+	# shellcheck disable=SC2086
+	nix shell $packages_str
+}
+
+nix_shell "$@"

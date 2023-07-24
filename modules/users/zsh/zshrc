@@ -55,9 +55,15 @@ alias ll='exa -l'
 alias pm='podman'
 alias v='nvim'
 alias r="ranger"
+alias t="task"
+alias lg="lazygit"
 
 if [[ (( $+commands[zoxide] )) ]]; then
   eval "$(zoxide init zsh)"
+fi
+
+if [[ (( $+commands[direnv] )) ]]; then
+  eval "$(direnv hook zsh)"
 fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.

@@ -4,6 +4,7 @@
 # Inspired from https://github.com/htr3n/zsh-config
 
 export EDITOR=nvim
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 #
 # Executes commands at login before zshrc.

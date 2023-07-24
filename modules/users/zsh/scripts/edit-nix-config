@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+wezterm start -- nvim -c 'cd ~/.dotfiles' -c 'Telescope find_files'
