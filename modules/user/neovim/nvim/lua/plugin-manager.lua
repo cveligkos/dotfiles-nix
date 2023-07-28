@@ -44,6 +44,7 @@ local files = {
 	"plugins.lsp-signature",
 	"plugins.lspsaga",
 	"plugins.gitsigns",
+	"plugins.fugitive",
 	"plugins.polyglot",
 	"plugins.nvim-surround",
 	"plugins.rainbow-delimiters",
