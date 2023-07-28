@@ -38,6 +38,7 @@ return {
 			jsonls = {},
 			html = {},
 			bashls = {},
+			pyright = {},
 		}
 
 		local common_config = {

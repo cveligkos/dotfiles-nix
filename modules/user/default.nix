@@ -60,7 +60,11 @@
       vscode-langservers-extracted
       shellcheck
       nodePackages.bash-language-server
+      nodePackages.pyright
       shfmt
+      ruff
+      mypy
+      black
 
       btop
       lm_sensors
