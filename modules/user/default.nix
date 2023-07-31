@@ -90,9 +90,10 @@
 
       htop
       procs
-      obs-studio
+      # firefox-devedition
       inotify-tools
 
+      hck
       # eww-wayland
     ];
   };
