@@ -1,12 +1,12 @@
-{
-  pkgs,
-  config,
-  lib,
-  ...
+{ pkgs
+, config
+, lib
+, ...
 }:
 with lib; let
   cfg = config.cv.wezterm;
-in {
+in
+{
   options.cv.wezterm.enable = mkOption {
     description = "Enable wezterm";
     type = types.bool;
@@ -21,8 +21,9 @@ in {
     home.file = {
       wezterm-config = {
         enable = true;
-        source = ./wezterm.lua;
-        target = ".config/wezterm/wezterm.lua";
+        source = ./config;
+        target = ".config/wezterm";
+        recursive = true;
       };
     };
   };
