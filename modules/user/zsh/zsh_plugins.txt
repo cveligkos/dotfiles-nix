@@ -8,3 +8,5 @@ ohmyzsh/ohmyzsh path:plugins/colored-man-pages
 romkatv/powerlevel10k
 
 unixorn/fzf-zsh-plugin
+
+trapd00r/LS_COLORS path:lscolors.sh

@@ -31,6 +31,24 @@ fi
 # Source your static plugins file.
 source $zsh_plugins
 
+# eval "$(dircolors)"
+
+# Completion config from here: https://thevaluable.dev/zsh-completion-guide-examples/
+zstyle ':completion:*' completer _extensions _complete _approximate
+zstyle ':completion:*' verbose yes
+zstyle ':completion:*' menu select
+zstyle ':completion:*' group-name ''
+zstyle ':completion:*:*:-command-:*:*' group-order alias builtins functions commands
+zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
+zstyle ':completion:*:*:*:*:descriptions' format '%F{green}-- %d --%f'
+zstyle ':completion:*:*:*:*:corrections' format '%F{yellow}!- %d (errors: %e) -!%f'
+zstyle ':completion:*:messages' format ' %F{purple} -- %d --%f'
+zstyle ':completion:*:warnings' format ' %F{red}-- no matches found --%f'
+zstyle ':completion:*' use-cache on
+zstyle ':completion:*' cache-path "$XDG_CACHE_HOME/zsh/.zcompcache"
+zstyle ':completion:*' squeeze-slashes true
+zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
+
 export HISTFILE=~/.zsh_history
 
 export HISTFILESIZE=1000000000
@@ -42,13 +60,26 @@ setopt EXTENDED_HISTORY
 setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_IGNORE_SPACE
 setopt HIST_REDUCE_BLANKS
-
 setopt NO_FLOW_CONTROL
+
+bindkey -v
+bindkey -M viins 'jk' vi-cmd-mode
+bindkey -M viins '^W' backward-delete-word
+
+bindkey "^H" backward-delete-char
+bindkey "^?" backward-delete-char
 
 bindkey '^[[A' history-substring-search-up
 bindkey '^[OA' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 bindkey '^[OB' history-substring-search-down
+
+zmodload zsh/complist
+bindkey -M menuselect 'h' vi-backward-char
+bindkey -M menuselect 'k' vi-up-line-or-history
+bindkey -M menuselect 'j' vi-down-line-or-history
+bindkey -M menuselect 'l' vi-forward-char
+# bindkey -M menuselect '^i' vi-insert
 
 alias ls='exa'
 alias ll='exa -l'
