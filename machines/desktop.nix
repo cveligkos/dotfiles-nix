@@ -14,6 +14,7 @@
     bluetooth.enable = true;
     hyprland.enable = true;
     podman.enable = true;
+    docker.enable = true;
     fonts.enable = true;
     _1password.enable = true;
   };

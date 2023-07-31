@@ -88,6 +88,7 @@ alias v='nvim'
 alias r="ranger"
 alias t="task"
 alias lg="lazygit"
+alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'
 
 if [[ (( $+commands[zoxide] )) ]]; then
   eval "$(zoxide init zsh)"

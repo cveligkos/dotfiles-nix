@@ -10,6 +10,7 @@
     ./bluetooth
     ./hyprland
     ./podman
+    ./docker
     ./fonts
     ./plasma
     ./xorg
