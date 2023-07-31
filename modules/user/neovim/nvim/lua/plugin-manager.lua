@@ -61,6 +61,7 @@ local files = {
 	"plugins.colorizer",
 	"plugins.rasi-vim",
 	"plugins.telescope",
+	"plugins.venv-selector",
 	"colorschemes.catppuccin",
 	"colorschemes.tokyonight",
 }
