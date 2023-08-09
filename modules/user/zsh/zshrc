@@ -89,6 +89,7 @@ alias r="ranger"
 alias t="task"
 alias lg="lazygit"
 alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'
+alias pn="pnpm"
 
 if [[ (( $+commands[zoxide] )) ]]; then
   eval "$(zoxide init zsh)"
