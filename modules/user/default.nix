@@ -41,6 +41,7 @@
       fd
       tokei
       jq
+      jless
       yq-go
       exa
       fzf
@@ -72,6 +73,7 @@
       kuro
       slack
       thunderbird
+      obsidian
 
       spotify
       sptlrx
@@ -88,14 +90,19 @@
       gcc
       wget
       gnumake
+      filezilla
 
       htop
       procs
       # firefox-devedition
       inotify-tools
+      gitui
 
       hck
       # eww-wayland
+      arion
+
+      google-chrome
     ];
   };
 }
