@@ -79,6 +79,7 @@
       vscode
 
       symfony-cli
+      distrobox
 
       time
       killall
