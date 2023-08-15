@@ -57,11 +57,11 @@ local files = {
 	-- "plugins.noice",
 	"plugins.indent-blankline",
 	"plugins.wilder",
-	"plugins.navigator",
+	-- "plugins.navigator",
 	"plugins.colorizer",
 	"plugins.rasi-vim",
 	"plugins.telescope",
-	"plugins.venv-selector",
+	-- "plugins.venv-selector",
 	"colorschemes.catppuccin",
 	"colorschemes.tokyonight",
 }

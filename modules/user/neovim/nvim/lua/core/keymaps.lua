@@ -2,6 +2,7 @@ vim.g.mapleader = " "
 
 local normalKeymaps = {
 	{ "<M-s>", ":write<CR>" },
+	{ "<C-n>", ":nohlsearch<CR>" },
 	-- movement
 	{ "<C-h>", "<C-w>h" },
 	{ "<C-j>", "<C-w>j" },
@@ -45,5 +46,4 @@ for _, v in ipairs(modes) do
 	end
 end
 
-vim.keymap.set('n', ';', ':', { noremap = true, silent = false })
-
+vim.keymap.set("n", ";", ":", { noremap = true, silent = false })
