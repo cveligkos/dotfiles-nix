@@ -1,5 +1,7 @@
 local opt = vim.opt
 
+opt.completeopt = "menu,menuone,noselect"
+
 opt.relativenumber = true
 opt.number = true
 
@@ -26,3 +28,5 @@ opt.foldmethod = "expr"
 -- opt.foldexpr = "nvim_treesitter#foldexpr()"
 opt.smartcase = true
 opt.ignorecase = true
+
+
