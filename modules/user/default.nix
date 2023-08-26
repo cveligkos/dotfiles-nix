@@ -29,6 +29,8 @@
       ranger
       kitty
 
+      xclip
+
       zip
       xz
       unzip
