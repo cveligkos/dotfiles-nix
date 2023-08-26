@@ -16,6 +16,8 @@
         config.rofi.enable = true;
         config.waybar.enable = true;
         git.enable = true;
+
+        alacritty.enable = true;
         spotify.enable = true;
         firefox.enable = true;
         neovim.enable = true;

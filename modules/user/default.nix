@@ -9,6 +9,7 @@
     ./config/hyprland
     ./config/rofi
     ./config/waybar
+    ./alacritty
     ./firefox
     ./git
     ./spotify
