@@ -54,6 +54,7 @@ local files = {
 	"plugins.comment-nvim",
 	"plugins.todo-comments",
 	"plugins.nvim-autopairs",
+	"plugins.kdl",
 	-- "plugins.noice",
 	"plugins.indent-blankline",
 	"plugins.wilder",
