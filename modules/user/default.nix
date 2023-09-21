@@ -47,7 +47,7 @@
       jq
       jless
       yq-go
-      exa
+      eza
       fzf
       zellij
       helix
