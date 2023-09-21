@@ -55,27 +55,10 @@
       bat
 
       nix-output-monitor
-      nixpkgs-fmt
-      nixd
-      nil
-      ccls
-      rnix-lsp
-      alejandra
-      lua-language-server
-      stylua
-      vscode-langservers-extracted
-      shellcheck
-      nodePackages.bash-language-server
-      nodePackages.pyright
-      shfmt
-      ruff
-      mypy
-      black
 
       btop
       lm_sensors
 
-      kuro
       slack
       thunderbird
       obsidian
