@@ -17,6 +17,7 @@
         config.waybar.enable = true;
         git.enable = true;
 
+        beancount.enable = true;
         alacritty.enable = true;
         spotify.enable = true;
         firefox.enable = true;

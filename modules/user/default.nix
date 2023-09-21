@@ -10,6 +10,7 @@
     ./config/rofi
     ./config/waybar
     ./alacritty
+    ./beancount
     ./firefox
     ./git
     ./spotify
@@ -57,6 +58,7 @@
       nixpkgs-fmt
       nixd
       nil
+      ccls
       rnix-lsp
       alejandra
       lua-language-server
