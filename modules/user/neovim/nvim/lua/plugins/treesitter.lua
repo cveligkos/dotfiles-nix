@@ -8,6 +8,7 @@ return {
 		require("nvim-treesitter.configs").setup({
 			ensure_installed = {
 				"bash",
+				"c",
 				"css",
 				"diff",
 				"dockerfile",
@@ -39,7 +40,9 @@ return {
 				"yaml",
 				"yuck",
 			},
-
+			highlight = {
+				enable = true,
+			},
 			autotag = {
 				enable = true,
 			},

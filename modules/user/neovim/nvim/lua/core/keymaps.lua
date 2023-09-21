@@ -1,7 +1,7 @@
 vim.g.mapleader = " "
 
 local normalKeymaps = {
-	{ "<M-s>", ":write<CR>" },
+	{ "<C-s>", ":write<CR>" },
 	{ "<C-n>", ":nohlsearch<CR>" },
 	-- movement
 	{ "<C-h>", "<C-w>h" },
@@ -11,19 +11,12 @@ local normalKeymaps = {
 	-- nvim-tree
 	{ "<leader>e", ":NvimTreeFindFileToggle<CR>", "Toggle NvimTree" },
 	-- lsp
-	{ "<M-f>", "<cmd>lua vim.lsp.buf.format()<CR>", "Format buffer using LSP" },
+	{ "<leader>p", "<cmd>lua vim.lsp.buf.format()<CR>", "Format buffer using LSP" },
+
 }
 
 local add_n = function(keymap)
 	table.insert(normalKeymaps, keymap)
-end
-
-local ok, telescope = pcall(require, "telescope.builtin")
-if ok then
-	add_n({ "<leader>ff", telescope.find_files })
-	add_n({ "<leader>fg", telescope.live_grep })
-	add_n({ "<leader>fb", telescope.buffers })
-	add_n({ "<leader>fh", telescope.help_tags })
 end
 
 local ok, oil = pcall(require, "oil")

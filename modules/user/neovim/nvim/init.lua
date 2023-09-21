@@ -1,7 +1,7 @@
 local modules = {
 	"core.options",
-	"plugin-manager",
 	"core.keymaps",
+	"plugin-manager",
 	"core.colorscheme",
 }
 
