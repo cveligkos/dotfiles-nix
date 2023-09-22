@@ -38,5 +38,9 @@ in {
         }/bin/git-credential-libsecret";
       };
     };
+    
+    home.packages = with pkgs; [
+      git-crypt
+    ];
   };
 }
