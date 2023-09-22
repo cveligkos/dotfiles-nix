@@ -25,6 +25,7 @@
         taskwarrior.enable = true;
         zsh.enable = true;
         zathura.enable = true;
+        zellij.enable = true;
         wezterm.enable = true;
       };
     };

@@ -18,6 +18,7 @@
     ./taskwarrior
     ./zsh
     ./zathura
+    ./zellij
     ./wezterm
   ];
 
