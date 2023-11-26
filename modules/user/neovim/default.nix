@@ -28,8 +28,12 @@ in {
       nodePackages.svelte-language-server
       nodePackages.typescript-language-server
       nodePackages.vscode-json-languageserver
+
+      # PHP
+      nodePackages.intelephense
+      # phpactor
+
       nodePackages.pyright
-      phpactor
       ccls
       rust-analyzer
       emmet-ls

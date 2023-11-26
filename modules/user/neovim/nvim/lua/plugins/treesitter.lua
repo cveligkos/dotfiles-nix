@@ -46,6 +46,9 @@ return {
 			autotag = {
 				enable = true,
 			},
+			indent = {
+				enable = false,
+			},
 		})
 	end,
 }
