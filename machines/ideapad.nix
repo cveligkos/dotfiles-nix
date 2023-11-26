@@ -26,6 +26,10 @@
     users.users = {
       cveligkos = userRegistry.systemUsers.cveligkos;
     };
+
+    virtualisation.virtualbox.host.enable = true;
+    users.extraGroups.vboxusers.members = ["cveligkos"];
+    environment.etc.hosts.mode = "0644";
   };
 in
   host.mkHost {
