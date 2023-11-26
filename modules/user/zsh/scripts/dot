@@ -1,0 +1,72 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+set -x
+
+parse_flags() {
+    while getopts "hoy" flag; do
+        case "${flag}" in
+        h)
+            echo "Staging git repo files for home directory"
+            update_home=1
+            ;;
+        o)
+            echo "Staging git repo files for the OS"
+            update_os=1
+            ;;
+        y)
+            no_confirm=1
+            ;;
+        *)
+            echo "script usage: dot [-o] [-h] [-y]"
+            exit 1
+            ;;
+        esac
+    done
+}
+
+confirm() {
+    local prompt="${1:-Continue? [Y/n]}"
+
+    if [[ $no_confirm -ne 1 ]]; then
+        read -r -p "$prompt " response
+        response=${response:-Y}
+
+        case "$response" in
+        [yY][eE][sS] | [yY] | "")
+            return 0
+            ;;
+        *)
+            return 1
+            ;;
+        esac
+    else
+        return 0
+    fi
+}
+
+dot() {
+    dotfiles_dir="$HOME/.dotfiles"
+    editor="${EDITOR:-nvim}"
+    update_home=0
+    update_os=0
+    no_confirm=0
+
+    parse_flags "$@"
+
+    $editor --cmd "cd $dotfiles_dir" "$dotfiles_dir"
+
+    if [[ $update_home -eq 1 ]]; then
+        echo "Staging changes for home directory"
+        bash -c "cd $dotfiles_dir && git add ."
+        confirm "Apply changes to home directory? [Y/n]" && home-manager switch --flake "$dotfiles_dir"
+    fi
+
+    if [[ $update_os -eq 1 ]]; then
+        echo "Staging changes for the OS"
+        bash -c "cd $dotfiles_dir && git add ."
+        confirm "Apply changes to the OS? [Y/n]" && sudo nixos-rebuild switch
+    fi
+}
+
+dot "$@"

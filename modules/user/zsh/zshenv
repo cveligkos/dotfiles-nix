@@ -1,4 +1,3 @@
-
 # Inspired from https://github.com/htr3n/zsh-config
 
 # https://github.com/sorin-ionescu/prezto/blob/master/runcoms/zshenv
@@ -6,3 +5,12 @@
 if [[ ( "$SHLVL" -eq 1 && ! -o LOGIN ) && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprofile"
 fi
+
+path=(~/.local/bin $path)
+
+if [[ -d "$HOME/.scripts" ]]; then
+    path=("$HOME/.scripts" $path)
+fi
+
+# eliminates duplicates in *paths
+typeset -gU cdpath fpath path
